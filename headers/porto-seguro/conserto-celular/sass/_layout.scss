@@ -1,0 +1,240 @@
+
+.row-horizontal { display: flex; }
+.background-top { background-color: #f1f1f1; }
+.max-width { max-width: 1250px; justify-content: space-between; }
+.font-style { 
+    font-size: 11px; font-weight: 600; line-height: 21px; color: #1c1c1c85; 
+    letter-spacing: 1.5px; font-family: 'Open Sans'; text-transform: uppercase; }
+
+.structure-guide {
+    max-width: 100%;
+
+    .guide {
+        margin: 0 auto;
+
+        .structure-acessibility-contrast {
+            margin: 5px 0 0 0;
+
+            .acessibility {
+                margin: 0 36px 0 18px;
+
+                .text {
+                    max-width: max-content;
+                    margin: 5px 11px 0 5px;
+
+                    p { padding: 0px 10px 0px 0px; }
+                }
+
+                .font-size {
+                    .vertical-line {
+                        width: 1px;
+                        height: 20px;
+                        margin: 5px 10px 10px;
+                        background-color: #1c1c1c3f;
+                    }
+
+                    .up,
+                    .down {
+                        font-size: 14px;
+                        cursor: pointer;
+                        margin: 5px 0 0 0;
+                        line-height: 24px;
+                    }
+                }
+            }
+
+            .contrast {
+                margin: 5px 40% 0 0;
+
+                .text {
+                    margin: 0 10px 0 0;
+
+                    p { line-height: 24px; }
+                }
+
+                .step-colors {
+                    .colors {
+                        width: 12px;
+                        height: 12px;
+                        cursor: pointer;
+                        border-radius: 100%;
+                        margin: 5px 12px 0 0;
+
+                        &:hover { width: 14px; height: 14px; margin: 5px 10px 0 0; }
+
+                        &:nth-child(1) { background-color: #33beff; }
+                        &:nth-child(2) { background-color: white; border: 1px #1c1c1c30 solid; }
+                        &:nth-child(3) { background-color: black; }
+                        &:nth-child(4) { background-color: #2f629b; }
+                    }
+                }
+            }
+
+            @media screen and (max-width: 695px) { margin: 0 auto; max-width: max-content; }
+        }
+
+        .nav {
+            margin: 5px 11px 0 0;
+            width: max-content;
+
+            .text {
+                margin: 5px 4px 0 0;
+
+                p { padding: 0px 10px 0px 0px; }
+            }
+
+            .links {
+                margin: 7px 0 0 0;
+
+                a {
+                    font-size: 12px;
+                    font-weight: 600;
+                    color: #1c1c1c85;
+                    font-family: 'Open Sans';
+                    padding: 0px 10px 0px 0px;
+                }
+            }
+
+            @media screen and (max-width: 695px) { margin: 0 auto; max-width: max-content; }
+        }
+
+        @media screen and (max-width:695px) { display: block; padding: 10px 0; }
+    }
+}
+
+.structure-header {
+    margin: 2px auto;
+    padding: 0 0 0 2px;
+    background-color: white;
+
+    .container-logo-menu {
+        width: 705px;
+        justify-content: space-between;
+
+        @media screen and (max-width: 965px) { width: 700px; justify-content: space-evenly; }
+
+        @media screen and (max-width: 695px) {
+            display: grid;
+            max-width: 100%;
+            justify-content: center;
+            grid-template-areas:
+                'structureMenu structureMenu structureMenu'
+                'structureLogo structureLogo structureLogo';
+        }
+
+        .structure-logo {
+            margin: 11px 0 0 10px;
+            grid-area: structureLogo;
+
+            img { width: 131px; }
+
+            @media screen and (max-width: 965px) { margin: 45px 0 0 10px; }
+
+            @media screen and (max-width: 695px) {
+                width: max-content;
+                height: max-content;
+                margin: 30px auto 20px auto;
+
+                img { width: 270px; }
+            }
+        }
+
+        .structure-menu {
+            padding: 6px 0 0 0;
+            width: max-content;
+            grid-area: structureMenu;
+
+            @media screen and (max-width: 965px) { width: 360px; }
+
+            @media screen and (max-width: 695px) { width: max-content; }
+
+            .menu-itens {
+                max-width: max-content;
+                justify-content: center;
+
+                @media screen and (max-width: 965px) {
+                    max-width: 500px;
+                    justify-content: space-evenly;
+
+                    div { display: block; }
+                }
+
+                @media screen and (max-width: 695px) {
+                    display: block;
+                    width: max-content;
+                    justify-content: center;
+
+                    div { width: max-content; }
+                }
+
+                div+div { li+li+li { margin: 0; } }
+
+                li {
+                    display: flex;
+                    margin: 0 15px 0 0;
+
+                    @media screen and (max-width: 960px) { width: 95px; justify-content: space-between; }
+
+                    @media screen and (max-width: 695px) { width: 300px; }
+
+                    a {
+                        font-size: 16px;
+                        margin: 0 0 0 0;
+                        color: #1c1c1c;
+                        font-weight: 600;
+                        padding: 26px 4px;
+                        letter-spacing: 0px;
+                        text-decoration: none;
+                        font-family: 'Open Sans';
+                    }
+
+                    div {
+                        margin: 26px 0 0 0px;
+
+                        img { width: 18px; height: 18px; }
+                    }
+                }
+            }
+        }
+    }
+
+    .structure-login {
+        width: 305px;
+
+        div {
+            text-align: center;
+
+            button {
+                padding: 9px;
+                font-size: 14px;
+                font-weight: 600;
+                line-height: 21px;
+                border-radius: 4px;
+                letter-spacing: 1.5px;
+                font-family: 'Open Sans';
+                margin: 20px auto 0 auto;
+            }
+
+            .btn-loja-porto {
+                color: #0046c0;
+                margin: 0 6px 0 0;
+                background-color: white;
+                border: #0046c0 1px solid;
+
+                @media screen and (max-width: 965px) { margin: 0 15px 0 16px; }
+
+                @media screen and (max-width: 695px) { margin: 0 15px 0 0; }
+            }
+
+            .btn-cliente { border: none; color: white; background-color: #0046c0; }
+
+            @media screen and (max-width: 965px) { margin: 60px 0 0 0; }
+
+            @media screen and (max-width: 695px) { margin: 0 auto; }
+        }
+
+        @media screen and (max-width: 695px) { width: 100%; text-align: center; }
+    }
+
+    @media screen and (max-width: 695px) { display: block; padding: 0 0 45px 0; }
+}
