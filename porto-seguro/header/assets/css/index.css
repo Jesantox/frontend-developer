@@ -57,146 +57,283 @@ table {
   display: flex;
 }
 
-.background-top {
-  background-color: #f1f1f1;
-}
-
-.max-width {
-  max-width: 1250px;
-  justify-content: space-between;
-}
-
-.font-style {
-  font-size: 11px;
-  font-weight: 600;
-  line-height: 21px;
-  color: rgba(28, 28, 28, 0.5215686275);
-  letter-spacing: 1.5px;
-  font-family: "Open Sans";
-  text-transform: uppercase;
-}
-
 .structure-guide {
   max-width: 100%;
+  background-color: #f1f1f1;
 }
 .structure-guide .guide {
+  display: flex;
+  padding: 0 20px;
+  justify-content: space-between;
+  max-width: 1240px;
+  margin: 20px auto 0 auto;
   margin: 0 auto;
+  padding: 5px 20px 10px 20px;
 }
 .structure-guide .guide .structure-acessibility-contrast {
-  margin: 5px 0 0 0;
+  display: flex;
+  justify-content: space-between;
+  width: 420px;
+  padding: 5px 0 0 0;
 }
 .structure-guide .guide .structure-acessibility-contrast .acessibility {
-  margin: 0 36px 0 18px;
-}
-.structure-guide .guide .structure-acessibility-contrast .acessibility .text {
-  max-width: max-content;
-  margin: 5px 11px 0 5px;
+  display: flex;
+  justify-content: space-between;
+  width: 195px;
 }
 .structure-guide .guide .structure-acessibility-contrast .acessibility .text p {
-  padding: 0px 10px 0px 0px;
+  font-weight: 600;
+  color: rgba(28, 28, 28, 0.5215686275);
+  font-family: "Open Sans";
+  font-size: 11px;
+  line-height: 21px;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+}
+.structure-guide .guide .structure-acessibility-contrast .acessibility .font-size {
+  width: 58px;
+  justify-content: space-between;
 }
 .structure-guide .guide .structure-acessibility-contrast .acessibility .font-size .vertical-line {
   width: 1px;
   height: 20px;
-  margin: 5px 10px 10px;
   background-color: rgba(28, 28, 28, 0.2470588235);
 }
 .structure-guide .guide .structure-acessibility-contrast .acessibility .font-size .up,
 .structure-guide .guide .structure-acessibility-contrast .acessibility .font-size .down {
-  font-size: 14px;
-  cursor: pointer;
-  margin: 5px 0 0 0;
-  line-height: 24px;
-}
-.structure-guide .guide .structure-acessibility-contrast .contrast {
-  margin: 5px 40% 0 0;
-}
-.structure-guide .guide .structure-acessibility-contrast .contrast .text {
-  margin: 0 10px 0 0;
-}
-.structure-guide .guide .structure-acessibility-contrast .contrast .text p {
-  line-height: 24px;
-}
-.structure-guide .guide .structure-acessibility-contrast .contrast .step-colors .colors {
-  width: 12px;
-  height: 12px;
-  cursor: pointer;
-  border-radius: 100%;
-  margin: 5px 12px 0 0;
-}
-.structure-guide .guide .structure-acessibility-contrast .contrast .step-colors .colors:hover {
-  width: 14px;
-  height: 14px;
-  margin: 5px 10px 0 0;
-}
-.structure-guide .guide .structure-acessibility-contrast .contrast .step-colors .colors:nth-child(1) {
-  background-color: #33beff;
-}
-.structure-guide .guide .structure-acessibility-contrast .contrast .step-colors .colors:nth-child(2) {
-  background-color: white;
-  border: 1px rgba(28, 28, 28, 0.1882352941) solid;
-}
-.structure-guide .guide .structure-acessibility-contrast .contrast .step-colors .colors:nth-child(3) {
-  background-color: black;
-}
-.structure-guide .guide .structure-acessibility-contrast .contrast .step-colors .colors:nth-child(4) {
-  background-color: #2f629b;
-}
-@media screen and (max-width: 695px) {
-  .structure-guide .guide .structure-acessibility-contrast {
-    margin: 0 auto;
-    max-width: max-content;
-  }
-}
-.structure-guide .guide .nav {
-  margin: 5px 11px 0 0;
-  width: max-content;
-}
-.structure-guide .guide .nav .text {
-  margin: 5px 4px 0 0;
-}
-.structure-guide .guide .nav .text p {
-  padding: 0px 10px 0px 0px;
-}
-.structure-guide .guide .nav .links {
-  margin: 7px 0 0 0;
-}
-.structure-guide .guide .nav .links a {
-  font-size: 12px;
   font-weight: 600;
   color: rgba(28, 28, 28, 0.5215686275);
   font-family: "Open Sans";
-  padding: 0px 10px 0px 0px;
+  font-size: 11px;
+  line-height: 21px;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  font-size: 14px;
+  cursor: pointer;
+  line-height: 24px;
 }
-@media screen and (max-width: 695px) {
-  .structure-guide .guide .nav {
-    margin: 0 auto;
-    max-width: max-content;
+@media screen and (max-width: 500px) {
+  .structure-guide .guide .structure-acessibility-contrast .acessibility {
+    margin: 10px auto;
+    width: 250px;
   }
 }
-@media screen and (max-width: 695px) {
+.structure-guide .guide .structure-acessibility-contrast .contrast {
+  display: flex;
+  justify-content: space-between;
+  width: 195px;
+}
+.structure-guide .guide .structure-acessibility-contrast .contrast .step-colors div {
+  background-color: #33beff;
+}
+.structure-guide .guide .structure-acessibility-contrast .contrast .step-colors div + div + div {
+  background-color: #000000;
+}
+.structure-guide .guide .structure-acessibility-contrast .contrast .step-colors div + div + div + div {
+  background-color: #2f629b;
+}
+.structure-guide .guide .structure-acessibility-contrast .contrast .step-colors div + div {
+  background-color: white;
+  border: 1px rgba(28, 28, 28, 0.1882352941) solid;
+}
+.structure-guide .guide .structure-acessibility-contrast .contrast .text p {
+  font-weight: 600;
+  color: rgba(28, 28, 28, 0.5215686275);
+  font-family: "Open Sans";
+  font-size: 11px;
+  line-height: 21px;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  line-height: 24px;
+}
+.structure-guide .guide .structure-acessibility-contrast .contrast .step-colors {
+  width: 110px;
+  padding: 5px 0 0 0;
+  justify-content: space-around;
+}
+.structure-guide .guide .structure-acessibility-contrast .contrast .step-colors div {
+  width: 12px;
+  height: 12px;
+  border-radius: 100%;
+  cursor: pointer;
+}
+.structure-guide .guide .structure-acessibility-contrast .contrast .step-colors div:hover {
+  width: 14px;
+  height: 14px;
+}
+@media screen and (max-width: 500px) {
+  .structure-guide .guide .structure-acessibility-contrast .contrast {
+    margin: 10px auto;
+    width: 250px;
+  }
+}
+@media screen and (max-width: 705px) {
+  .structure-guide .guide .structure-acessibility-contrast {
+    margin: 0 auto;
+    width: 450px;
+  }
+}
+@media screen and (max-width: 500px) {
+  .structure-guide .guide .structure-acessibility-contrast {
+    margin: 10px auto;
+    width: 350px;
+    display: block;
+  }
+}
+.structure-guide .guide .nav {
+  display: flex;
+  justify-content: space-between;
+  width: 242px;
+  padding: 5px 0 0 0;
+}
+.structure-guide .guide .nav .links {
+  width: 180px;
+  display: flex;
+  padding: 2px 0 0 0;
+  justify-content: space-around;
+}
+.structure-guide .guide .nav .text p {
+  font-weight: 600;
+  color: rgba(28, 28, 28, 0.5215686275);
+  font-family: "Open Sans";
+  font-size: 11px;
+  line-height: 21px;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+}
+.structure-guide .guide .nav .links a {
+  font-weight: 600;
+  color: rgba(28, 28, 28, 0.5215686275);
+  font-family: "Open Sans";
+  font-size: 12px;
+}
+@media screen and (max-width: 705px) {
+  .structure-guide .guide .nav {
+    margin: 0 auto;
+  }
+}
+@media screen and (max-width: 500px) {
+  .structure-guide .guide .nav {
+    display: block;
+    margin: 20px auto 0 auto;
+    width: 250px;
+    text-align: center;
+  }
+}
+@media screen and (max-width: 500px) {
+  .structure-guide .guide .nav .links {
+    margin: 10px auto;
+  }
+}
+@media screen and (max-width: 705px) {
   .structure-guide .guide {
     display: block;
-    padding: 10px 0;
+    padding: 20px 0;
+  }
+}
+@media screen and (max-width: 500px) {
+  .structure-guide .guide {
+    max-width: 100%;
+    display: block;
   }
 }
 
 .structure-header {
-  margin: 2px auto;
-  padding: 0 0 0 2px;
-  background-color: white;
+  display: flex;
+  padding: 0 20px;
+  justify-content: space-between;
+  max-width: 1240px;
+  margin: 20px auto 0 auto;
 }
 .structure-header .container-logo-menu {
-  width: 705px;
+  width: 710px;
+  display: flex;
   justify-content: space-between;
 }
-@media screen and (max-width: 965px) {
-  .structure-header .container-logo-menu {
-    width: 700px;
-    justify-content: space-evenly;
+.structure-header .container-logo-menu .structure-logo {
+  float: left;
+  margin: auto 0;
+  grid-area: structureLogo;
+}
+.structure-header .container-logo-menu .structure-logo img {
+  width: 131px;
+}
+@media screen and (max-width: 705px) {
+  .structure-header .container-logo-menu .structure-logo {
+    margin: 30px auto;
+  }
+  .structure-header .container-logo-menu .structure-logo img {
+    width: 270px;
   }
 }
-@media screen and (max-width: 695px) {
+.structure-header .container-logo-menu .structure-menu {
+  width: max-content;
+  grid-area: structureMenu;
+}
+.structure-header .container-logo-menu .structure-menu .menu-itens {
+  display: flex;
+  max-width: max-content;
+  justify-content: center;
+}
+.structure-header .container-logo-menu .structure-menu .menu-itens li {
+  display: flex;
+  margin: 0 15px 0 0;
+}
+.structure-header .container-logo-menu .structure-menu .menu-itens li a {
+  font-size: 16px;
+  margin: 0 0 0 0;
+  color: #1c1c1c;
+  font-weight: 600;
+  padding: 10px 4px;
+  letter-spacing: 0px;
+  text-decoration: none;
+  font-family: "Open Sans";
+  cursor: default;
+}
+.structure-header .container-logo-menu .structure-menu .menu-itens li div {
+  margin: 10px 0 0 0px;
+}
+.structure-header .container-logo-menu .structure-menu .menu-itens li div img {
+  width: 18px;
+  height: 18px;
+  cursor: pointer;
+}
+@media screen and (max-width: 1020px) {
+  .structure-header .container-logo-menu .structure-menu .menu-itens {
+    max-width: 400px;
+    justify-content: space-around;
+  }
+  .structure-header .container-logo-menu .structure-menu .menu-itens div {
+    display: block;
+  }
+}
+@media screen and (max-width: 705px) {
+  .structure-header .container-logo-menu .structure-menu .menu-itens {
+    display: block;
+  }
+}
+@media screen and (max-width: 1020px) {
+  .structure-header .container-logo-menu .structure-menu .menu-itens li {
+    width: 95px;
+    justify-content: space-between;
+  }
+}
+@media screen and (max-width: 705px) {
+  .structure-header .container-logo-menu .structure-menu .menu-itens li {
+    width: 300px;
+  }
+}
+@media screen and (max-width: 1020px) {
+  .structure-header .container-logo-menu .structure-menu {
+    width: 360px;
+  }
+}
+@media screen and (max-width: 705px) {
+  .structure-header .container-logo-menu .structure-menu {
+    width: max-content;
+  }
+}
+@media screen and (max-width: 705px) {
   .structure-header .container-logo-menu {
     display: grid;
     max-width: 100%;
@@ -204,110 +341,12 @@ table {
     grid-template-areas: "structureMenu structureMenu structureMenu" "structureLogo structureLogo structureLogo";
   }
 }
-.structure-header .container-logo-menu .structure-logo {
-  margin: 11px 0 0 10px;
-  grid-area: structureLogo;
-}
-.structure-header .container-logo-menu .structure-logo img {
-  width: 131px;
-}
-@media screen and (max-width: 965px) {
-  .structure-header .container-logo-menu .structure-logo {
-    margin: 45px 0 0 10px;
-  }
-}
-@media screen and (max-width: 695px) {
-  .structure-header .container-logo-menu .structure-logo {
-    width: max-content;
-    height: max-content;
-    margin: 30px auto 20px auto;
-  }
-  .structure-header .container-logo-menu .structure-logo img {
-    width: 270px;
-  }
-}
-.structure-header .container-logo-menu .structure-menu {
-  padding: 6px 0 0 0;
-  width: max-content;
-  grid-area: structureMenu;
-}
-@media screen and (max-width: 965px) {
-  .structure-header .container-logo-menu .structure-menu {
-    width: 360px;
-  }
-}
-@media screen and (max-width: 695px) {
-  .structure-header .container-logo-menu .structure-menu {
-    width: max-content;
-  }
-}
-.structure-header .container-logo-menu .structure-menu .menu-itens {
-  max-width: max-content;
-  justify-content: center;
-}
-@media screen and (max-width: 965px) {
-  .structure-header .container-logo-menu .structure-menu .menu-itens {
-    max-width: 500px;
-    justify-content: space-evenly;
-  }
-  .structure-header .container-logo-menu .structure-menu .menu-itens div {
-    display: block;
-  }
-}
-@media screen and (max-width: 695px) {
-  .structure-header .container-logo-menu .structure-menu .menu-itens {
-    display: block;
-    width: max-content;
-    justify-content: center;
-  }
-  .structure-header .container-logo-menu .structure-menu .menu-itens div {
-    width: max-content;
-  }
-}
-.structure-header .container-logo-menu .structure-menu .menu-itens div + div li + li + li {
-  margin: 0;
-}
-.structure-header .container-logo-menu .structure-menu .menu-itens li {
-  display: flex;
-  margin: 0 15px 0 0;
-}
-@media screen and (max-width: 960px) {
-  .structure-header .container-logo-menu .structure-menu .menu-itens li {
-    width: 95px;
-    justify-content: space-between;
-  }
-}
-@media screen and (max-width: 695px) {
-  .structure-header .container-logo-menu .structure-menu .menu-itens li {
-    width: 300px;
-  }
-}
-.structure-header .container-logo-menu .structure-menu .menu-itens li a {
-  font-size: 16px;
-  margin: 0 0 0 0;
-  color: #1c1c1c;
-  font-weight: 600;
-  padding: 26px 4px;
-  letter-spacing: 0px;
-  text-decoration: none;
-  font-family: "Open Sans";
-  cursor: default;
-}
-.structure-header .container-logo-menu .structure-menu .menu-itens li div {
-  margin: 26px 0 0 0px;
-}
-.structure-header .container-logo-menu .structure-menu .menu-itens li div img {
-  width: 18px;
-  height: 18px;
-  cursor: pointer;
-}
 .structure-header .structure-login {
-  width: 305px;
+  width: 260px;
+  display: flex;
+  justify-content: space-between;
 }
-.structure-header .structure-login div {
-  text-align: center;
-}
-.structure-header .structure-login div button {
+.structure-header .structure-login button {
   padding: 9px;
   font-size: 14px;
   font-weight: 600;
@@ -315,53 +354,47 @@ table {
   border-radius: 4px;
   letter-spacing: 1.5px;
   font-family: "Open Sans";
-  margin: 20px auto 0 auto;
   cursor: pointer;
 }
-.structure-header .structure-login div button a {
+.structure-header .structure-login button a {
   width: max-content;
   text-decoration: none;
   color: #0046c0;
 }
-.structure-header .structure-login div .btn-loja-porto {
-  margin: 0 6px 0 0;
-  background-color: white;
-  border: #0046c0 1px solid;
-}
-@media screen and (max-width: 965px) {
-  .structure-header .structure-login div .btn-loja-porto {
-    margin: 0 15px 0 16px;
-  }
-}
-@media screen and (max-width: 695px) {
-  .structure-header .structure-login div .btn-loja-porto {
-    margin: 0 15px 0 0;
-  }
-}
-.structure-header .structure-login div .btn-cliente {
+.structure-header .structure-login .btn-cliente button {
   border: none;
   background-color: #0046c0;
 }
-.structure-header .structure-login div .btn-cliente a {
+.structure-header .structure-login .btn-cliente button a {
   color: white;
 }
-@media screen and (max-width: 965px) {
-  .structure-header .structure-login div {
-    margin: 60px 0 0 0;
+.structure-header .structure-login .btn-loja-porto button {
+  background-color: white;
+  border: #0046c0 1px solid;
+}
+@media screen and (max-width: 1020px) {
+  .structure-header .structure-login {
+    display: block;
+    text-align: center;
+  }
+  .structure-header .structure-login button {
+    margin: 10px auto;
   }
 }
-@media screen and (max-width: 695px) {
-  .structure-header .structure-login div {
-    margin: 0 auto;
-  }
-}
-@media screen and (max-width: 695px) {
+@media screen and (max-width: 705px) {
   .structure-header .structure-login {
     width: 100%;
     text-align: center;
   }
+  .structure-header .structure-login button {
+    padding: 25px;
+    font-size: 20px;
+  }
+  .structure-header .structure-login .btn-cliente button {
+    margin: 10px auto 40px auto;
+  }
 }
-@media screen and (max-width: 695px) {
+@media screen and (max-width: 705px) {
   .structure-header {
     display: block;
     padding: 0 0 45px 0;

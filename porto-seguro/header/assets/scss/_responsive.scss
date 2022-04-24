@@ -1,0 +1,64 @@
+
+
+@mixin responsive ($structure)  {
+
+    @if $structure == 'guide' {
+        @media screen and (max-width: 705px) { display: block; padding: 20px 0; }
+        @media screen and (max-width: 500px) { max-width: 100%; display: block; }
+    }  
+
+    @else if $structure == 'structure-acessibility-contrast' {
+        @media screen and (max-width: 705px) { margin: 0 auto; width: 450px; }
+        @media screen and (max-width: 500px) { margin: 10px auto; width: 350px; display: block; }
+    }
+
+    @else if $structure == 'container-acessibility-contrast' {
+        @media screen and (max-width: 500px) { margin: 10px auto; width: 250px; }
+    }
+
+    @else if $structure == 'nav' {
+        @media screen and (max-width: 705px) { margin: 0 auto;}
+        @media screen and (max-width: 500px) { display: block; margin: 20px auto 0 auto; width: 250px; text-align: center; }
+
+        .links { @media screen and (max-width: 500px) { margin: 10px auto; } }
+    }
+
+    @else if $structure == 'structure-header' {
+         @media screen and (max-width: 705px) { display: block; padding: 0 0 45px 0; } 
+    }
+
+    @else if $structure == 'container-logo-menu' {
+        @media screen and (max-width: 705px) {
+            display: grid; max-width: 100%; justify-content: center;
+            grid-template-areas:
+                'structureMenu structureMenu structureMenu'
+                'structureLogo structureLogo structureLogo';
+        }
+    }
+
+    @else if $structure == 'structure-logo' {
+        @media screen and (max-width: 705px) { margin: 30px auto; img { width: 270px; } } 
+    }
+
+    @else if $structure == 'structure-menu' {
+        @media screen and (max-width: 1020px) { width: 360px; }
+        @media screen and (max-width: 705px) { width: max-content; }
+    }
+
+    @else if $structure == 'menu-itens' {
+        @media screen and (max-width: 1020px) { max-width: 400px; justify-content: space-around; div { display: block; } }
+        @media screen and (max-width: 705px) { display: block; }
+
+        li {
+            @media screen and (max-width: 1020px) { width: 95px; justify-content: space-between; }
+            @media screen and (max-width: 705px) { width: 300px; }
+        }
+    }
+
+    @else if $structure == 'structure-login' {
+        @media screen and (max-width: 1020px) { display: block; text-align: center; button { margin: 10px auto; } }
+        @media screen and (max-width: 705px) { 
+            width: 100%; text-align: center; button { padding: 25px; font-size: 20px; }
+            .btn-cliente { button { margin: 10px auto 40px auto;} }} 
+    }
+} 

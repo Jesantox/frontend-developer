@@ -1,0 +1,53 @@
+// VARIABLES 
+
+$background-top: #f1f1f1;
+$light-blue: #33beff;
+$dark-blue: #2f629b;
+$black: #000000;
+$white: #ffff;
+
+// MIXINS
+
+@mixin background ($color) {
+    @if $color == top { background-color: $background-top; }
+    @else { background-color: white; }
+}
+
+@mixin structure-content ($structure) {
+    display: flex; padding: 0 20px;
+    justify-content: space-between;  
+    max-width: 1240px; margin: 20px auto 0 auto;
+    @if $structure == guide { margin: 0 auto; padding: 5px 20px 10px 20px; }
+}
+
+@mixin guide-container ($container) {
+    display: flex; justify-content: space-between;
+    @if $container == acessibilityContrast { width: 420px; padding: 5px 0 0 0; } 
+    @else if $container == sub-container { width: 195px; }
+    @else if $container == nav { 
+        width: 242px; padding: 5px 0 0 0;
+        .links { width: 180px; display: flex; padding: 2px 0 0 0; justify-content: space-around; } 
+    }
+}
+
+@mixin circle { width: 12px; height: 12px; border-radius: 100%; cursor: pointer; }
+
+@mixin circle-color {
+    .step-colors {
+        div { background-color: $light-blue}
+        div+div+div { background-color: $black }
+        div+div+div+div { background-color: $dark-blue }
+        div+div { background-color: white; border: 1px #1c1c1c30 solid;  }
+    }
+}
+
+@mixin font-style ($style) {
+    font-weight: 600; color: #1c1c1c85; font-family: 'Open Sans';
+    @if $style == link { font-size: 12px; } 
+    @else { font-size: 11px; line-height: 21px; letter-spacing: 1.5px; text-transform: uppercase; }
+}
+
+@mixin button {
+    padding: 9px; font-size: 14px; font-weight: 600; line-height: 21px; border-radius: 
+    4px; letter-spacing: 1.5px; font-family: 'Open Sans'; cursor: pointer;
+}
